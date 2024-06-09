@@ -1,0 +1,191 @@
+/* Modelo original: https://cleversoft-spacex.myshopify.com/ */
+
+body {
+  /* Se centra el body junto con todos sus contenedores principales uno encima del otro */
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 0px;
+  font-size: 1rem;
+}
+
+.marco {
+  /* Solo válido durante el diseño - se da un borde para ver el contenedor en pantalla */
+  border: solid 1px black;
+}
+
+.ancho-reducido {
+  /* A todos los contenedores primarios (tienen al body como parent) se le da un ancho fijo respecto del body, */
+  /* el cual se ajusta posteriorment según el viewport usado */
+  width: 80%;
+}
+
+.menu-horizontal {
+  /* Separación uniforme de los items de un menú horizontal */
+}
+
+.efecto-opcion-clickeable:hover {
+  /* Dar un efecto a los elementos que funcionan como botones */
+  color: blue;
+  font-weight: 700;
+  box-shadow: 10px 5px 0px black;
+}
+
+/* ---------------------------------------------------------------------------- */
+/* Contenedor principal 1/6 en el body (opciones de login / registro)           */
+/* ---------------------------------------------------------------------------- */
+.contenedor-usuario {
+  /* background-color: #f5f5f5; */
+  background-color: gainsboro;
+  display: flex;
+  flex-direction: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.usuario-envio-gratuito {
+  margin: 0.3rem;
+}
+
+.usuario-opciones {
+  /* padding: 5px; */
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+/* ---------------------------------------------------------------------------- */
+/* Contenedor principal 2/6 en el body (logo space.x)                           */
+/* ---------------------------------------------------------------------------- */
+.contenedor-banner {
+  display: flex;
+  flex-direction: column nowrap;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.logo {
+  width: 10rem;
+  margin: 10%;
+}
+
+.menu-usuario {
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+/* ---------------------------------------------------------------------------- */
+/* Contenedor principal 3/6 en el body (menúes de acceso a otras páginas)       */
+/* ---------------------------------------------------------------------------- */
+.contenedor-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.contenedor-menu-opciones {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 3%;
+  font-size: 1.5rem;
+  margin-right: 2%;
+}
+
+.contenedor-menu-iconos {
+  display: flex;
+  width: 40%;
+  justify-content: flex-end;
+  text-align: center;
+  justify-content: flex-start;
+
+  img {
+    width: 40px;
+  }
+}
+
+.contenedor-principal {
+  /* Contenedor principal 4/6 en el body (imagen en tamaño grande) */
+  background-color: #f5f5f5;
+  z-index: 1;
+}
+
+.imagen-principal {
+  flex-shrink: 0.5;
+}
+
+.contenedor-imagenes {
+  /* Contenedor principal 5/6 en el body (3 imágenes) */
+  background-color: burlywood;
+}
+
+.contenedor-tarjetas {
+  /* Contenedor principal 6/6 en el body (4 tarjetas) */
+  background-color: cornflowerblue;
+}
+
+/* --------------------------------------------------------------------------- */
+/* Ajustes para dispositivos de tipo tablet                                    */
+/* --------------------------------------------------------------------------- */
+/* @media all and (min-width: 500px) and (max-width: 800px) { */
+@media all and (min-width: 700px) and (max-width: 1024px) {
+  .ancho-reducido {
+    width: 90%;
+    padding: 2em;
+  }
+
+  .contenedor-usuario {
+    font-size: 0.8em;
+
+    .usuario-opciones {
+      width: 40%;
+    }
+  }
+  .contenedor-menu-opciones {
+    font-size: 1.2em;
+  }
+  .contenedor-menu-iconos {
+    img {
+      width: 30px;
+    }
+  }
+}
+
+/* --------------------------------------------------------------------------- */
+/* Ajustes para dispositivos de tipo celular                                   */
+/* --------------------------------------------------------------------------- */
+@media screen and (max-width: 700px) {
+  .ancho-reducido {
+    padding: 1em;
+  }
+
+  .item-menu {
+    padding-top: 0.5em;
+  }
+
+  .contenedor-usuario {
+    padding: 0.5em;
+    font-size: 0.8em;
+
+    .usuario-opciones {
+      flex-direction: column;
+    }
+  }
+
+  .contenedor-menu-opciones {
+    font-size: 0.8em;
+    flex-direction: column;
+  }
+  .contenedor-menu-iconos {
+    flex-direction: column;
+    img {
+      width: 20px;
+    }
+  }
+
+
+}
