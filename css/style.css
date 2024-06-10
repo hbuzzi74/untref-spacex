@@ -1,5 +1,12 @@
 /* Modelo original: https://cleversoft-spacex.myshopify.com/ */
 
+.oswald-h1 {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
   /* Se centra el body junto con todos sus contenedores principales uno encima del otro */
   display: flex;
@@ -69,14 +76,10 @@ body {
   margin: 10%;
 }
 
-.menu-usuario {
-  flex-direction: row;
-  justify-content: space-around;
-}
-
 /* ---------------------------------------------------------------------------- */
 /* Contenedor principal 3/6 en el body (menúes de acceso a otras páginas)       */
 /* ---------------------------------------------------------------------------- */
+
 .contenedor-menu {
   display: flex;
   flex-direction: row;
@@ -108,20 +111,100 @@ body {
   }
 }
 
+/* ---------------------------------------------------------------------------- */
+/* Contenedor principal 4/6 en el body (imagen principal + textos)              */
+/* ---------------------------------------------------------------------------- */
+
 .contenedor-principal {
   /* Contenedor principal 4/6 en el body (imagen en tamaño grande) */
-  background-color: #f5f5f5;
-  z-index: 1;
+  background-image: url("../images/imagen_principal.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 780px;
+  /* width: 100%; */
+  text-align: center;
+  z-index: 0;
+
+  h1 {
+    margin-top: 3%;
+    color: white;
+    font-size: 5rem;
+    font-family: Oswald, sans-serif !important;
+  }
+
+  h2 {
+    color: white;
+    font-size: 3rem;
+  }
 }
 
-.imagen-principal {
-  flex-shrink: 0.5;
+.boton-comprar {
+  border-radius: 10%;
+  border: none;
+  background-color: #dc9916;
+  width: 15rem;
+  height: 5rem;
+  color: white;
+  font-size: large;
 }
+
+/* ---------------------------------------------------------------------------- */
+/* Contenedor principal 5/6 en el body (2 bloques con imágenes)                 */
+/* ---------------------------------------------------------------------------- */
 
 .contenedor-imagenes {
   /* Contenedor principal 5/6 en el body (3 imágenes) */
-  background-color: burlywood;
+  display: flex;
+  flex-direction: row wrap;
+  justify-content: center;
 }
+
+.imagenes-contenedor-izquierdo {
+  background-image: url(../images/cuadro1_imagen1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  justify-content: flex-start;
+  height: 40rem;
+  width: 40%;
+  margin-left: 5%;
+  text-align: left;
+  z-index: 0;
+
+  .boton-comprar {
+    width: 8rem;
+    height: 2rem;
+    margin-top: 5%;
+    font-size: large;
+  }
+}
+
+.imagenes-contenedor-derecho {
+  display: flex;
+  flex-direction: row wrap;
+  /* height: 40rem; */
+  width: 40%;
+
+  img {
+    margin: 1rem;
+  }
+
+  & img:nth-child(1),
+  img:nth-child(2) {
+    width: 45%;
+    height: 50%;
+  }
+
+  & img:nth-child(3) {
+    width: 50%;
+    height: 70%;
+  }
+}
+
+/* ---------------------------------------------------------------------------- */
+/* Contenedor principal 6/6 en el body (4 tarjetas con imagen y texto)          */
+/* ---------------------------------------------------------------------------- */
 
 .contenedor-tarjetas {
   /* Contenedor principal 6/6 en el body (4 tarjetas) */
@@ -153,6 +236,30 @@ body {
       width: 30px;
     }
   }
+
+  .contenedor-principal {
+    h1 {
+      font-size: 4rem;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+  }
+
+  .imagenes-contenedor-izquierdo {
+    h1 {
+      font-size: 1.5rem;
+    }
+    h2 {
+      font-size: 0.8rem;
+    }
+    .boton-comprar {
+      width: 8rem;
+      height: 2rem;
+      margin-top: 5%;
+      font-size: medium;
+    }
+  }
 }
 
 /* --------------------------------------------------------------------------- */
@@ -177,15 +284,36 @@ body {
   }
 
   .contenedor-menu-opciones {
-    font-size: 0.8em;
+    font-size: 1.2em;
     flex-direction: column;
   }
   .contenedor-menu-iconos {
     flex-direction: column;
     img {
-      width: 20px;
+      width: 35px;
     }
   }
 
-
+  .contenedor-principal {
+    h1 {
+      font-size: 3rem;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+  }
+  .imagenes-contenedor-izquierdo {
+    h1 {
+      font-size: 1rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+    .boton-comprar {
+      width: 7rem;
+      height: 1.5rem;
+      margin-top: 2%;
+      font-size: small;
+    }
+  }
 }
