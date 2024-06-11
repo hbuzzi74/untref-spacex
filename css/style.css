@@ -162,6 +162,7 @@ body {
   img:hover {
     transition: 1s;
     transform: scale(1.2);
+    border: 1px solid;
     border-radius: 10%;
   }
 }
@@ -221,18 +222,21 @@ body {
   background-color: gainsboro;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   text-align: center;
   color: white;
-  height: 30rem;
+  height: 35rem;
 
   h1 {
-    margin: 0% 0 3%;
+    margin-top: 5%;
+    margin-bottom: 5%;
   }
 
   .tarjetas {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-content: space-around;
     width: 70%;
     /* margin-left: 10%; */
     gap: 5%;
@@ -255,6 +259,7 @@ body {
     img:hover {
       transition: 1s;
       transform: scale(1.2);
+      border: 1px solid;
       border-radius: 10%;
     }
   }
@@ -329,11 +334,7 @@ body {
   }
 
   .contenedor-tarjetas {
-    height: 25rem;
-
-    h1 {
-      margin: 0% 0 3%;
-    }
+    height: 30rem;
 
     .tarjetas {
       width: 80%;
@@ -389,6 +390,9 @@ body {
     }
   }
   .imagenes-contenedor-izquierdo {
+    margin-left: 3%;
+    width: 50%;
+
     h1 {
       font-size: 1rem;
     }
@@ -405,6 +409,8 @@ body {
 
   .imagenes-contenedor-derecho {
     height: 30em;
+    width: 50%;
+    margin-left: 5%;
 
     img {
       margin: 0.5rem;
@@ -423,29 +429,19 @@ body {
   }
 
   .contenedor-tarjetas {
-    height: 25rem;
-
-    h1 {
-      margin: 0% 0 3%;
-    }
+    height: 25%;
+    flex-direction: column;
 
     .tarjetas {
+      flex-direction: column;
       width: 80%;
-      margin-left: 8%;
-      gap: 3%;
+      margin-left: 20%;
+      gap: 15px;
     }
 
     .tarjeta-individual {
       width: 70%;
-      height: 100%;
+      height: 60%;
     }
   }
 }
-
-/*
-Equipo 2:
-Santiago Fernandez
-Fabián Romero
-Esteban Rodriguez
-Federico Arrigone
-*/
