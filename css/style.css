@@ -28,9 +28,10 @@ body {
 
 .efecto-opcion-clickeable:hover {
   /* Dar un efecto a los elementos que funcionan como botones */
-  color: blue;
+  color: white;
   font-weight: 700;
   box-shadow: 10px 5px 0px black;
+  background-color: chocolate;
 }
 
 /* ---------------------------------------------------------------------------- */
